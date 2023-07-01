@@ -91,7 +91,7 @@ public class MainProject {
 			System.out.println("Vuoi modificare qualcosa del file multimediale? [Y/N]");
 			String risposta = input.nextLine();
 			if (risposta.equalsIgnoreCase("Y")) {
-				if (lettoreMultimediale[inputLettoreMultimediale - 1] instanceof Immagine) {
+				if (el instanceof Immagine) {
 
 					System.out.println("Vuoi modificare la luminosità? \n1. Si \n2. No, va bene così");
 					int risposta1 = Integer.parseInt(input.nextLine());
@@ -105,9 +105,11 @@ public class MainProject {
 							int risposta2 = Integer.parseInt(input.nextLine());
 							switch (risposta2) {
 							case 1:
+								System.out.println(((Immagine) el));
 								((Immagine) el).diminuisciLuminosità();
 								break;
 							case 2:
+								System.out.println(((Immagine) el));
 								((Immagine) el).aumentaLuminosità();
 								break;
 							case 3:
@@ -123,7 +125,8 @@ public class MainProject {
 						continue;
 					}
 
-				} else if (el instanceof RegistrazioneAudio) {
+				} else if(el instanceof RegistrazioneAudio) {
+
 					System.out.println("Vuoi modificare il volume? \n1. Si \n2. No, va bene così");
 					int risposta1 = Integer.parseInt(input.nextLine());
 
@@ -134,12 +137,13 @@ public class MainProject {
 							System.out.println(
 									"Vuoi abbassare o alzare il volume? \n1. Abbassare il volume. \n2. Alzare il volume. \n3. Indietro");
 							int risposta2 = Integer.parseInt(input.nextLine());
-
 							switch (risposta2) {
 							case 1:
+								System.out.println(((RegistrazioneAudio) el));
 								((RegistrazioneAudio) el).abbassaVolume();
 								break;
 							case 2:
+								System.out.println(((RegistrazioneAudio) el));
 								((RegistrazioneAudio) el).alzaVolume();
 								break;
 							case 3:
@@ -147,12 +151,17 @@ public class MainProject {
 								break;
 							}
 						}
+
 						break;
+
 					case 2:
 						System.out.println("Ok a posto così");
 						continue;
 					}
-				} else if (el instanceof Video) {
+				}
+				
+				
+				else if (el instanceof Video) {
 				    System.out.println("Vuoi modificare il volume o la luminosità? \n1. Il volume \n2. La luminosità");
 
 				    int risposta1 = Integer.parseInt(input.nextLine());
@@ -173,9 +182,11 @@ public class MainProject {
 
 				                        switch (risposta1b) {
 				                            case 1:
-				                                ((Video) el).diminuisciLuminosità();
+				                            	System.out.println(((Video) el));
+				                                ((Video) el).abbassaVolume();
 				                                break;
 				                            case 2:
+				                            	System.out.println(((Video) el));
 				                                ((Video) el).alzaVolume();
 				                                break;
 				                            case 3:
@@ -196,13 +207,15 @@ public class MainProject {
 				                case 1:
 				                    while (exit2) {
 				                        System.out.println("Vuoi abbassare o alzare la luminosità? \n1. Abbassare la luminosità. \n2. Alzare la luminosità. \n3. Indietro");
-				                        int risposta1b = Integer.parseInt(input.nextLine());
+				                        int risposta2b = Integer.parseInt(input.nextLine());
 
-				                        switch (risposta1b) {
+				                        switch (risposta2b) {
 				                            case 1:
-				                                ((Video) el).abbassaVolume();
+				                            	System.out.println(((Video) el));
+				                                ((Video) el).diminuisciLuminosità();
 				                                break;
 				                            case 2:
+				                            	System.out.println(((Video) el));
 				                                ((Video) el).aumentaLuminosità();
 				                                break;
 				                            case 3:
@@ -216,6 +229,8 @@ public class MainProject {
 				                    continue;
 				            }
 				    }
+				
+
 				
 
 				}
