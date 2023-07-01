@@ -38,7 +38,7 @@ public class Video extends ElementoMultimediale implements IVolume,ILuminosita{
 
 	@Override
 	public int alzaVolume() {
-		if(this.volume <= 5) {
+		if(this.volume >= 5) {
 			System.out.println("Il volume non puó essere superiore a 5");
 			return this.volume;
 		}
