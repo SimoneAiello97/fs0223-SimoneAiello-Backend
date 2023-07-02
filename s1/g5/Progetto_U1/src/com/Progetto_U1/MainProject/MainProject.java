@@ -13,8 +13,9 @@ public class MainProject {
 
 		// ORA FARÓ SI CHE SIA L'UTENTE A SCEGLIERE, TRAMITE LO SCANNER, I VARI ELEMENTI
 		// MULTIMEDIALI
-
-		System.out.println("LETTORE MULTIMEDIALE");
+		System.out.println("\u001B[35m" + "=====================" + "\u001B[0m");
+		System.out.println("\u001B[33m" + "LETTORE MULTIMEDIALE" + "\u001B[0m");
+		System.out.println("\u001B[35m" + "=====================" + "\u001B[0m");
 		System.out.println("Salve! In questo momento riempiamo il tuo lettore con 5 elementi multimediali!");
 		Scanner input = new Scanner(System.in);
 		ElementoMultimediale[] lettoreMultimediale = new ElementoMultimediale[5];
@@ -27,37 +28,36 @@ public class MainProject {
 
 			while (variabile) {
 				System.out.println("Specifica il tipo di file multimediale che desideri inserire:");
-				System.out.println("(Attualmente hai " + i + " /5 Elementi Multimediali)");
+				System.out.println("\u001B[36m" +"(Attualmente hai " +"\u001B[33m" + i  + "\u001B[0m" + "\u001B[36m" + " /5 Elementi Multimediali)" + "\u001B[0m");
 				System.out.println("1 per Immagine \n2 per Audio \n3 per Video");
-				System.out.println("");
 				tipologia = Integer.parseInt(input.nextLine());
 
 				switch (tipologia) {
 
 				case 1:
-					System.out.println("Inserire il titolo dell'immagine:");
+					System.out.println("\u001B[36m" + "Inserire il titolo dell'immagine:" + "\u001B[0m");
 					title = input.nextLine();
 					lettoreMultimediale[i] = new Immagine(title);
 					variabile = false;
 					break;
 				case 2:
-					System.out.println("Inserire il titolo dell'audio:");
+					System.out.println("\u001B[36m" + "Inserire il titolo dell'audio:"+ "\u001B[0m");
 					title = input.nextLine();
-					System.out.println("Inserire la durata dell'audio `" + title + "`.");
+					System.out.println("\u001B[36m" + "Inserire la durata dell'audio `" + title + "`." + "\u001B[0m");
 					durata = Integer.parseInt(input.nextLine());
 					lettoreMultimediale[i] = new RegistrazioneAudio(title, durata);
 					variabile = false;
 					break;
 				case 3:
-					System.out.println("Inserire il titolo del video. ");
+					System.out.println("\u001B[36m" + "Inserire il titolo del video." + "\u001B[0m");
 					title = input.nextLine();
-					System.out.println("Inserire la durata del video `" + title + "`.");
+					System.out.println("\u001B[36m" + "Inserire la durata del video `" + title + "`." + "\u001B[0m");
 					durata = Integer.parseInt(input.nextLine());
 					lettoreMultimediale[i] = new Video(title, durata);
 					variabile = false;
 					break;
 				default:
-					System.out.println("Selezione errata!");
+					System.out.println("\u001B[31m" + "Selezione errata!" + "\u001B[0m");
 					break;
 				}
 			}
@@ -65,13 +65,13 @@ public class MainProject {
 
 		// E INFINE SARÁ L'UTENTE A "GIOCARE" CON IL LETTORE MULTIMEDIALE
 
-		int inputLettoreMultimediale = 0;
+		int inputLettoreMultimediale ;
 		boolean condizione = true;
 
 		while (condizione) {
-			System.out.println("=============");
-			System.out.println("    MENU   ");
-			System.out.println("=============");
+			System.out.println("\u001B[35m" + "=============" + "\u001B[0m");
+			System.out.println("\u001B[33m" + "    MENU   " + "\u001B[0m");
+			System.out.println("\u001B[35m" + "=============" + "\u001B[0m");
 			System.out.println("Scegli da 1 a 5 per mettere play, altrimenti 0 per stoppare tutto!");
 
 			for (int i = 0; i < 5; i++) {
@@ -82,7 +82,7 @@ public class MainProject {
 
 			if (inputLettoreMultimediale == 0) {
 				condizione = false;
-				System.out.println("Stop!");
+				System.out.println("\u001B[31m" + "Stop! Lettore Multimediale interrotto!" + "\u001B[0m");
 				break;
 			}
 

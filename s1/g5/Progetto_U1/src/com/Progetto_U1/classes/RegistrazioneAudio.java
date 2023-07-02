@@ -24,7 +24,7 @@ public class RegistrazioneAudio extends ElementoMultimediale implements IVolume{
 	@Override
 	public int abbassaVolume() {
 		if(this.volume <= 0) {
-			System.out.println("Il volume non puó essere inferiore a 0");
+			System.out.println("\u001B[31m" + "Il volume non puó essere inferiore a 0" + "\u001B[0m");
 			return this.volume;
 		}
 		this.volume--;
@@ -35,7 +35,7 @@ public class RegistrazioneAudio extends ElementoMultimediale implements IVolume{
 	@Override
 	public int alzaVolume() {
 		if(this.volume >= 5) {
-			System.out.println("Il volume non puó essere superiore a 5");
+			System.out.println("\u001B[31m" + "Il volume non puó essere superiore a 5" + "\u001B[0m");
 			return this.volume;
 		}
 		this.volume++;
@@ -48,12 +48,12 @@ public class RegistrazioneAudio extends ElementoMultimediale implements IVolume{
 	public void play() {
 		
 		for(int i = 0; i < this.durata;i++){
-			System.out.print(this.title);
+			System.out.print("\u001B[32m" + this.title);
 			
 			for (int x = 0; x < this.volume;x ++) {
 				System.out.print("!");
 			}
-			System.out.println("");
+			System.out.println("" + "\u001B[0m");
 		}
 		
 	}

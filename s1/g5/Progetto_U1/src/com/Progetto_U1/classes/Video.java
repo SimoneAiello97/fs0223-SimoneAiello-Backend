@@ -15,7 +15,6 @@ public class Video extends ElementoMultimediale implements IVolume,ILuminosita{
 		this.durata = durata;
 		this.volume = 4; // li inizializzo come valori giá predefiniti
 		this.luminosita = 2; 
-	
 	}
 	
 
@@ -28,7 +27,7 @@ public class Video extends ElementoMultimediale implements IVolume,ILuminosita{
 	@Override
 	public int abbassaVolume() {
 		if(this.volume <= 0) {
-			System.out.println("Il volume non puó essere inferiore a 0");
+			System.out.println("\u001B[31m" + "Il volume non puó essere inferiore a 0" + "\u001B[0m");
 			return this.volume;
 		}
 		this.volume--;
@@ -39,7 +38,7 @@ public class Video extends ElementoMultimediale implements IVolume,ILuminosita{
 	@Override
 	public int alzaVolume() {
 		if(this.volume >= 5) {
-			System.out.println("Il volume non puó essere superiore a 5");
+			System.out.println("\u001B[31m" + "Il volume non puó essere superiore a 5" + "\u001B[0m");
 			return this.volume;
 		}
 		this.volume++;
@@ -50,7 +49,7 @@ public class Video extends ElementoMultimediale implements IVolume,ILuminosita{
 	@Override
 	public int aumentaLuminosità() {
 		if(this.luminosita >= 10) {
-			System.out.println("La luminosità non puó essere superiore a 10");
+			System.out.println("\u001B[31m" + "La luminosità non puó essere superiore a 10" + "\u001B[0m");
 			return this.luminosita;
 		}
 		this.luminosita++;
@@ -61,7 +60,7 @@ public class Video extends ElementoMultimediale implements IVolume,ILuminosita{
 	@Override
 	public int diminuisciLuminosità() {
 		if(this.luminosita <= 0) {
-			System.out.println("La luminosità non puó essere inferiore a 0");
+			System.out.println("\u001B[31m" + "La luminosità non puó essere inferiore a 0" + "\u001B[0m");
 			return this.luminosita;
 		}
 		this.luminosita--;
@@ -73,14 +72,14 @@ public class Video extends ElementoMultimediale implements IVolume,ILuminosita{
 	@Override
 	public void play() {
 		for(int i = 0; i < this.durata;i++){
-			System.out.print(this.title);			
+			System.out.print("\u001B[32m" + this.title);			
 			for (int x = 0; x < this.volume;x ++) {
 			System.out.print('!');
 			}
 			for (int j = 0; j < this.luminosita;j ++) {
 			System.out.print('*');
 			}
-			System.out.println("");
+			System.out.println("" + "\u001B[0m");
 		}
 		
 	}

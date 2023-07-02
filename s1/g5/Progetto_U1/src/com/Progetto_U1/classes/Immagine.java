@@ -10,7 +10,6 @@ public class Immagine extends ElementoMultimediale implements ILuminosita{
 	public Immagine(String title) {
 		super(title);
 		this.luminosita = 3;
-		
 	}
 	
 	
@@ -28,11 +27,11 @@ public class Immagine extends ElementoMultimediale implements ILuminosita{
 	};
 	   
 	public void show() {
-		System.out.print(this.title);
+		System.out.print("\u001B[32m" + this.title);
 		for (int i = 0; i < this.luminosita;i ++) {
 			System.out.print('*');
 		}
-		System.out.println("");
+		System.out.println("" + "\u001B[0m");
 	}
 
 
@@ -40,7 +39,7 @@ public class Immagine extends ElementoMultimediale implements ILuminosita{
 	@Override
 	public int aumentaLuminosità() {
 		if(this.luminosita >= 10) {
-			System.out.println("La luminosità non puó essere superiore a 10");
+			System.out.println("\u001B[31m" + "La luminosità non puó essere superiore a 10" + "\u001B[0m");
 			return this.luminosita;
 		}
 		this.luminosita++;
@@ -53,7 +52,7 @@ public class Immagine extends ElementoMultimediale implements ILuminosita{
 	@Override
 	public int diminuisciLuminosità() {
 		if(this.luminosita <= 0) {
-			System.out.println("La luminosità non puó essere inferiore a 0");
+			System.out.println("\u001B[31m" + "La luminosità non puó essere inferiore a 0" + "\u001B[0m");
 			return this.luminosita;
 		}
 		this.luminosita--;
