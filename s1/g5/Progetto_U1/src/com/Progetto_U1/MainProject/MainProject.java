@@ -72,7 +72,7 @@ public class MainProject {
 			System.out.println("\u001B[35m" + "=============" + "\u001B[0m");
 			System.out.println("\u001B[33m" + "    MENU   " + "\u001B[0m");
 			System.out.println("\u001B[35m" + "=============" + "\u001B[0m");
-			System.out.println("Scegli da 1 a 5 per mettere play, altrimenti 0 per stoppare tutto!");
+			System.out.println("\u001B[36m" + "Scegli da 1 a 5 per mettere play, altrimenti 0 per stoppare tutto!" + "\u001B[0m");
 
 			for (int i = 0; i < 5; i++) {
 				System.out.print((i + 1) + ")" + lettoreMultimediale[i].getTitle() + " ");
@@ -88,12 +88,12 @@ public class MainProject {
 
 			ElementoMultimediale el = lettoreMultimediale[inputLettoreMultimediale - 1];
 			lettoreMultimediale[inputLettoreMultimediale - 1].play();
-			System.out.println("Vuoi modificare qualcosa del file multimediale? [Y/N]");
+			System.out.println("\u001B[36m" + "Vuoi modificare qualcosa del file multimediale? [Y/N]" + "\u001B[0m");
 			String risposta = input.nextLine();
 			if (risposta.equalsIgnoreCase("Y")) {
 				if (el instanceof Immagine) {
 
-					System.out.println("Vuoi modificare la luminosità? \n1. Si \n2. No, va bene così");
+					System.out.println("\u001B[36m" + "Vuoi modificare la luminosità?" + "\u001B[0m" + "\n1. Si \n2. No, va bene così" );
 					int risposta1 = Integer.parseInt(input.nextLine());
 
 					switch (risposta1) {
@@ -101,16 +101,16 @@ public class MainProject {
 						boolean exit = true;
 						while (exit) {
 							System.out.println(
-									"Vuoi abbassare o alzare la luminosità? \n1. Abbassare la luminosità. \n2. Alzare la luminosità. \n3. Indietro");
+									"\u001B[36m" + "Vuoi abbassare o alzare la luminosità?" + "\u001B[0m" + "\n1. Abbassare la luminosità. \n2. Alzare la luminosità. \n3. Indietro");
 							int risposta2 = Integer.parseInt(input.nextLine());
 							switch (risposta2) {
 							case 1:
-								System.out.println(((Immagine) el));
 								((Immagine) el).diminuisciLuminosità();
+								System.out.println(((Immagine) el));
 								break;
 							case 2:
-								System.out.println(((Immagine) el));
 								((Immagine) el).aumentaLuminosità();
+								System.out.println(((Immagine) el));
 								break;
 							case 3:
 								exit = false;
@@ -121,13 +121,13 @@ public class MainProject {
 						break;
 
 					case 2:
-						System.out.println("Ok a posto così");
+						System.out.println("\u001B[36m" + "Ok a posto così" + "\u001B[0m");
 						continue;
 					}
 
 				} else if(el instanceof RegistrazioneAudio) {
 
-					System.out.println("Vuoi modificare il volume? \n1. Si \n2. No, va bene così");
+					System.out.println("\u001B[36m" + "Vuoi modificare il volume?" + "\u001B[0m" + "\n1. Si \n2. No, va bene così" );
 					int risposta1 = Integer.parseInt(input.nextLine());
 
 					switch (risposta1) {
@@ -135,16 +135,16 @@ public class MainProject {
 						boolean exit = true;
 						while (exit) {
 							System.out.println(
-									"Vuoi abbassare o alzare il volume? \n1. Abbassare il volume. \n2. Alzare il volume. \n3. Indietro");
+									"\u001B[36m" + "Vuoi abbassare o alzare il volume?" + "\u001B[0m" + "\n1. Abbassare il volume. \n2. Alzare il volume. \n3. Indietro");
 							int risposta2 = Integer.parseInt(input.nextLine());
 							switch (risposta2) {
 							case 1:
-								System.out.println(((RegistrazioneAudio) el));
 								((RegistrazioneAudio) el).abbassaVolume();
+								System.out.println(((RegistrazioneAudio) el));
 								break;
 							case 2:
-								System.out.println(((RegistrazioneAudio) el));
 								((RegistrazioneAudio) el).alzaVolume();
+								System.out.println(((RegistrazioneAudio) el));
 								break;
 							case 3:
 								exit = false;
@@ -155,14 +155,14 @@ public class MainProject {
 						break;
 
 					case 2:
-						System.out.println("Ok a posto così");
+						System.out.println("\u001B[36m" + "Ok a posto così" + "\u001B[0m");
 						continue;
 					}
 				}
 				
 				
 				else if (el instanceof Video) {
-				    System.out.println("Vuoi modificare il volume o la luminosità? \n1. Il volume \n2. La luminosità");
+				    System.out.println("\u001B[36m" + "Vuoi modificare il volume o la luminosità?"  + "\u001B[0m" + "\n1. Il volume \n2. La luminosità");
 
 				    int risposta1 = Integer.parseInt(input.nextLine());
 
@@ -172,22 +172,22 @@ public class MainProject {
 				    switch (risposta1) {
 				        // Il volume
 				        case 1:
-				            System.out.println("Vuoi modificare il volume? \n1. Si \n2. No, va bene così");
+				            System.out.println("\u001B[36m" + "Vuoi modificare il volume?"  + "\u001B[0m" + "\n1. Si \n2. No, va bene così");
 				            int risposta1a = Integer.parseInt(input.nextLine());
 				            switch (risposta1a) {
 				                case 1:
 				                    while (exit1) {
-				                        System.out.println("Vuoi abbassare o alzare il volume? \n1. Abbassare il volume. \n2. Alzare il volume. \n3. Indietro");
+				                        System.out.println("\u001B[36m" + "Vuoi abbassare o alzare il volume?" + "\u001B[0m" + "\n1. Abbassare il volume. \n2. Alzare il volume. \n3. Indietro");
 				                        int risposta1b = Integer.parseInt(input.nextLine());
 
 				                        switch (risposta1b) {
 				                            case 1:
-				                            	System.out.println(((Video) el));
 				                                ((Video) el).abbassaVolume();
+				                                System.out.println(((Video) el));
 				                                break;
 				                            case 2:
-				                            	System.out.println(((Video) el));
 				                                ((Video) el).alzaVolume();
+				                                System.out.println(((Video) el));
 				                                break;
 				                            case 3:
 				                                exit1 = false;
@@ -196,27 +196,27 @@ public class MainProject {
 				                    }
 				                    break;
 				                case 2:
-				                    System.out.println("Ok a posto così");
+				                    System.out.println("\u001B[36m" + "Ok a posto così" + "\u001B[0m");
 				                    continue;
 				            }
 				            // La luminosità
 				        case 2:
-				            System.out.println("Vuoi modificare la luminosità? \n1. Si \n2. No, va bene così");
+				            System.out.println("\u001B[36m" + "Vuoi modificare la luminosità?" + "\u001B[0m" + "\n1. Si \n2. No, va bene così");
 				            int risposta2a = Integer.parseInt(input.nextLine());
 				            switch (risposta2a) {
 				                case 1:
 				                    while (exit2) {
-				                        System.out.println("Vuoi abbassare o alzare la luminosità? \n1. Abbassare la luminosità. \n2. Alzare la luminosità. \n3. Indietro");
+				                        System.out.println("\u001B[36m" + "Vuoi abbassare o alzare la luminosità?" + "\u001B[0m" + "\n1. Abbassare la luminosità. \n2. Alzare la luminosità. \n3. Indietro");
 				                        int risposta2b = Integer.parseInt(input.nextLine());
 
 				                        switch (risposta2b) {
 				                            case 1:
-				                            	System.out.println(((Video) el));
 				                                ((Video) el).diminuisciLuminosità();
+				                                System.out.println(((Video) el));
 				                                break;
 				                            case 2:
-				                            	System.out.println(((Video) el));
 				                                ((Video) el).aumentaLuminosità();
+				                                System.out.println(((Video) el));
 				                                break;
 				                            case 3:
 				                                exit2 = false;
@@ -225,7 +225,7 @@ public class MainProject {
 				                    }
 				                    break;
 				                case 2:
-				                    System.out.println("Ok a posto così");
+				                    System.out.println("\u001B[36m" + "Ok a posto così" + "\u001B[0m");
 				                    continue;
 				            }
 				    }
