@@ -1,0 +1,26 @@
+15:19:09.521 [main] INFO  com.day1.MainProject.MainProject - InfoLog
+15:20:27.979 [main] INFO  com.day1.MainProject.MainProject - InfoLog
+15:20:27.991 [main] INFO  com.day1.MainProject.MainProject - [I@618b19ad
+15:21:01.311 [main] INFO  com.day1.MainProject.MainProject - InfoLog
+15:21:01.317 [main] INFO  com.day1.MainProject.MainProject - [2, 1, 5, 9, 7]
+15:29:29.673 [main] INFO  com.day1.MainProject.MainProject - InfoLog
+15:29:29.681 [main] INFO  com.day1.MainProject.MainProject - [5, 1, 1, 9, 4]
+15:47:30.905 [main] INFO  com.day1.MainProject.MainProject - InfoLog
+15:47:30.914 [main] INFO  com.day1.MainProject.MainProject - [3, 4, 7, 5, 5]
+15:47:40.251 [main] ERROR com.day1.MainProject.MainProject - La posizione del numero puó essere un numero da 1 a 5
+15:47:42.711 [main] ERROR com.day1.MainProject.MainProject - La posizione del numero puó essere un numero da 1 a 5
+15:50:24.358 [main] INFO  com.day1.MainProject.MainProject - InfoLog
+15:50:24.367 [main] INFO  com.day1.MainProject.MainProject - [10, 10, 7, 10, 3]
+15:50:54.721 [main] INFO  com.day1.MainProject.MainProject - InfoLog
+15:51:55.808 [main] ERROR com.day1.MainProject.MainProject - La posizione del numero puó essere un numero da 1 a 5
+15:52:16.520 [main] ERROR com.day1.MainProject.MainProject - La posizione del numero puó essere un numero da 1 a 5
+15:52:24.860 [main] ERROR com.day1.MainProject.MainProject - La posizione del numero puó essere un numero da 1 a 5
+15:52:58.643 [main] ERROR com.day1.MainProject.MainProject - La posizione del numero puó essere un numero da 1 a 5
+15:53:01.200 [main] ERROR com.day1.MainProject.MainProject - La posizione del numero puó essere un numero da 1 a 5
+15:53:03.009 [main] ERROR com.day1.MainProject.MainProject - La posizione del numero puó essere un numero da 1 a 5
+15:56:54.101 [main] ERROR com.day1.MainProject.MainProject - La posizione del numero puó essere un numero da 1 a 5
+15:57:00.241 [main] ERROR com.day1.MainProject.MainProject - numero invalido
+15:58:09.429 [main] ERROR com.day1.MainProject.MainProject - La posizione del numero puó essere un numero da 1 a 5
+16:15:45.253 [main] ERROR com.day1.MainProject.MainProject - Seee abbiamo er fenomeno qui!
+16:18:46.476 [main] ERROR com.day1.MainProject.MainProject - Seee abbiamo er fenomeno qui!
+16:21:18.341 [main] ERROR com.day1.MainProject.MainProject - Seee abbiamo er fenomeno qui!
