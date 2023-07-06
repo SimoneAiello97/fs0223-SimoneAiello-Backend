@@ -21,11 +21,6 @@ public class MainProject {
 		// TODO Auto-generated method stub
 		//primoEsercizio();
 		//secondoEsercizio();
-		Rubrica rubrica = new Rubrica("Mario Rossi", "1234");
-		Rubrica.inserimento(rubrica);
-		System.out.println(rubrica.toString());
-		Rubrica.cancellazione("Mario Rossi");
-		System.out.println(rubrica.toString());
 		
 	}
 
