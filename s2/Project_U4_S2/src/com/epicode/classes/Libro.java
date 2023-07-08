@@ -31,22 +31,15 @@ public class Libro extends ElementoLetterario {
 	}
 
 
-	public static String toStringFile(Libro a) {
-		return Libro.class.getSimpleName()  // Serve per identificare il tipo di elemento
-				+ "@" + a.isbn
-				+ "@" + a.titolo
-				+ "@" + a.annoPubblicazione
-				+ "@" + a.numeroPagine
-				+ "@" + a.autore
-				+ "@" + a.genere;
-		}
 	
-	public static Libro fromStringFile(String stringFile) {
-		String[] split = stringFile.split("@");
-		Genere genere = Genere.valueOf(split[6]);
-		
-		return new Libro(split[1], split[2], Integer.valueOf(split[3]), Integer.valueOf(split[4]), split[5], genere);
+
+	@Override
+	public String toString() {
+		return "Libro [autore=" + autore + ", genere=" + genere + ", isbn=" + isbn + ", titolo=" + titolo
+				+ ", annoPubblicazione=" + annoPubblicazione + ", numeroPagine=" + numeroPagine + "]";
 	}
+
+	
 	
 
 }
